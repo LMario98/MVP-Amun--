@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodotti – Amuni</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">AMUNI</a>
+        <input type="search" id="search" placeholder="Cerca un prodotto...">
+    </nav>
+
+    <main>
+        <h1>I nostri prodotti</h1>
+        <section id="catalog" class="catalog"></section>
+    </main>
+
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <button type="button" id="popup-close" class="popup-close">×</button>
+            <div id="popup-body"></div>
+        </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
