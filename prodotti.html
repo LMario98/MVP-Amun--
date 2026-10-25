@@ -10,6 +10,57 @@
 
 <body>
 
+
+    <header>
+        <nav class="navbar" aria-label="Navigazione principale">
+            <a href="index.html" class="logo">AMUNÌ</a>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prodotti.html" aria-current="page">Prodotti</a></li>
+                <li><a href="index.html#come-funziona">Come funziona</a></li>
+                <li><a href="#account">Account</a></li>
+            </ul>
+
+            <label for="search">Cerca un prodotto</label>
+            <input type="search" id="search" placeholder="Cerca un prodotto...">
+        </nav>
+    </header>
+
+
+    <main>
+        <h1>I nostri prodotti</h1>
+        <section id="catalog" class="catalog"></section>
+    </main>
+
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <button type="button" id="popup-close" class="popup-close">×</button>
+            <div id="popup-body"></div>
+        </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodotti – Amuni</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
     <nav class="navbar">
         <a href="index.html" class="logo">AMUNI</a>
         <input type="search" id="search" placeholder="Cerca un prodotto...">
@@ -31,4 +82,4 @@
     <script src="js/main.js"></script>
 </body>
 
-</html>
+</html> -->
