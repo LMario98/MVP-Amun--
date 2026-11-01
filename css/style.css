@@ -146,6 +146,70 @@ header {
     color: #625B50;
 }
 
+
+/* Pagina Prodotti */
+main {
+    width: min(100% - 40px, 1110px);
+    margin: 0 auto;
+}
+
+body:has(#catalog) {
+    background-color: var(--color-ivory);
+}
+
+main:has(#catalog) {
+    padding-top: 56px;
+    padding-bottom: 80px;
+}
+
+main:has(#catalog) h1 {
+    margin: 0 0 36px;
+    text-align: center;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    color: var(--color-charcoal);
+}
+
+
+/* Campo di ricerca del catalogo */
+#search {
+    width: 100%;
+    max-width: 360px;
+    padding: 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 0;
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#search::placeholder {
+    color: #81786B;
+}
+
+#search:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 2px rgb(196 154 58 / 15%);
+}
+
+/* Posizionamento della ricerca nella navbar */
+.navbar label[for="search"] {
+    font-size: 0.85rem;
+}
+
+.navbar #search {
+    flex: 0 1 260px;
+}
+
+/* Ricerca più compatta su smartphone */
+@media (max-width: 700px) {
+    .navbar #search {
+        flex: 1 1 100%;
+        max-width: 360px;
+    }
+}
+
+
 /* Navbar responsive */
 @media (max-width: 700px) {
     .navbar {
@@ -163,5 +227,63 @@ header {
 
     .navbar li a {
         font-size: 0.75rem;
+    }
+}
+
+
+/* Griglia del catalogo */
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+/* Schede prodotto */
+.product-card {
+    overflow: hidden;
+    background-color: var(--color-beige);
+    border: 1px solid var(--color-border);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgb(9 8 7 / 8%);
+}
+
+/* Immagine del prodotto */
+.product-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    padding: 20px;
+}
+
+/* Contenuto della scheda */
+.product-card-content {
+    padding: 20px;
+}
+
+.product-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+}
+
+.product-card p {
+    margin: 0 0 14px;
+    color: #625B50;
+}
+
+/* Adattamento a tablet e smartphone */
+@media (max-width: 800px) {
+    .catalog {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 520px) {
+    .catalog {
+        grid-template-columns: 1fr;
     }
 }
