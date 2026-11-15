@@ -1,5 +1,6 @@
-// object di chiavi e valori di prodotti 
-const products = [{
+// object di chiavi e valori di prodotti
+// export dei prodotti  
+export const products = [{
     id: 1,
     name: "iphone",
     description: "Scopri il nuovo iphone ",
